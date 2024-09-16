@@ -69,14 +69,12 @@ class PostDetailView(DetailView):
     model = Post
     template_name = "post_detail.html"
     
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        obj = get_object_or_404(Post, pk = kwargs.get('pk'))
-        print(obj)
-        print(self.get_object())
-        context['comments'] = obj.post_comment.all()
-        context['tags'] = obj.tags.all()
-        return context
+    def get(self, request: HttpRequest, *args: Any, **kwargs: Any) -> HttpResponse:
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        context['comments'] = list(self.object.post_comment.all())
+        context['tags'] = list(self.object.tags.all())
+        return self.render_to_response(context)
     
     
 class PostDeleteView(DeleteView):
