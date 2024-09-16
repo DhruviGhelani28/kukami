@@ -1,0 +1,47 @@
+Create a Django project with a single app called "contacts".
+The app should have two models called "Contact" and "PhoneNumber".
+The "Contact" model should have fields for first name and last name, while the "PhoneNumber"
+model should have fields for the phone number itself and the type of phone number (e.g. home,
+work, mobile).
+Implement views and templates for CRUD operations on both models, so that users can add,
+view, edit, and delete contact records and phone number records.
+
+For example, users should be able to:
+● Create a new contact record by filling out a form with first name and last name fields.
+● Add phone number records to a contact record by filling out a form with phone number
+and phone number type fields.
+● View a list of all contact records with links to view, edit, or delete each record.
+● View the details of a single contact record, including all associated phone number
+records.
+● Edit the details of a contact record by filling out a form with first name and last name
+fields.
+● Edit the details of a phone number record by filling out a form with phone number and
+phone number type fields.
+● Delete a contact record and all associated phone number records by clicking on the
+delete button.
+
+
+Create a Django project with a single app called "blog".
+The app should have models for "Post", "Comment", and "Tag".
+The "Post" model should have fields for title, content, publication date, and tags (which should
+be implemented as a ManyToManyField to the "Tag" model).
+The "Comment" model should have fields for name, email, content, and the post it relates to
+(which should be implemented as a ForeignKey to the "Post" model).
+Implement views and templates for CRUD operations on all models, so that users can add,
+view, edit, and delete blog post records, comment records, and tag records.
+
+For example, users should be able to:
+● Create a new blog post record by filling out a form with title, content, publication date,
+and tags fields.
+● View a list of all blog post records with links to view, edit, or delete each record.
+View the details of a single blog post record, including all associated comment records
+and tag records.
+● Add comment records to a blog post record by filling out a form with name, email, and
+content fields.
+● Edit the details of a blog post record by filling out a form with title, content, and
+publication date, and tags fields.
+● Edit the details of a comment record by filling out a form with name, email, and content
+fields.
+● Edit the details of a tag record by filling out a form with tag name field.
+● Delete a blog post record and all associated comment records and tag records by
+clicking on a delete button
